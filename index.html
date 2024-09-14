@@ -6,17 +6,50 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RaminTuzelis</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon2.png">
+    <link rel="icon" type="image/svg" sizes="48x48" href="assets/images/logo.svg">
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--    Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--    Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- Background Animation -->
+<div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
 <!-- Header and navigation-->
 <header>
     <nav class="nav-bar">
+        <!-- Logo -->
         <div class="logo">
-            <img src="assets/images/logo.svg" alt="Logo" width="120px" height="120px">
+            <a href="#"><img src="assets/images/logo.svg" alt="">aminTuzelis</a>
         </div>
+        <!-- Navigation links -->
         <ul class="nav-links">
             <li class=""><a href="#home">Home</a></li>
             <li class=""><a href="#about">About</a></li>
@@ -27,9 +60,20 @@
     </nav>
 </header>
 
-<!-- Home section-->
-<section id="home">
-    <h1>Welcome to My Portfolio</h1>
+<!-- Hero section -->
+<section id="home" class="hero-section">
+    <div class="hero-content">
+<!--        Left Side: Text and Button-->
+        <div class="hero-text">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm Karolis Mickūnas Full Stack Web Developer</p>
+            <a href="#projects" class="hero-btn">See My Work</a>
+        </div>
+<!--        Right Side: Image-->
+        <div class="hero-image">
+            <img src="assets/images/Me.jpg" alt="Personal Photo">
+        </div>
+    </div>
 </section>
 
 <section id="about">
