@@ -232,6 +232,7 @@ body {
 .hero-text h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  color: #9acd32;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
@@ -268,4 +269,59 @@ body {
   height: auto;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+// About Section ----------------------------------------------------
+
+section#about {
+  padding-top: 120px;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: left;
+  padding: 80px 0;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 80px;
+}
+
+.about-text {
+  flex: 1;
+  margin-left: 50px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #9acd32;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-image {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
