@@ -156,7 +156,7 @@ Media queries are used in SCSS to adjust layout, font sizes, and element visibil
 
 If you have any questions or would like to collaborate on a project, feel free to contact me via the following channels:
 
-- **Email**: karolis.mickunas@example.com
+- **Email**: karolis.mickunas@gmail.com
 - **LinkedIn**: [Karolis Mickūnas](https://www.linkedin.com/in/karolis-mickunas/)
 - **GitHub**: [ramintuzelis](https://github.com/ramintuzelis)
 
