@@ -969,7 +969,7 @@ section#projects {
   }
   .about-image img {
     width: 250px;
-    order: 2; /* Ensure image appears below text on tablets */
+    order: 2;
     margin-top: 20px;
   }
   .about-text {
@@ -1084,7 +1084,7 @@ section#projects {
   }
   .about-image img {
     width: 180px;
-    order: 2; /* Ensure image appears below text on small screens */
+    order: 2;
     margin-top: 20px;
   }
   .about-text {

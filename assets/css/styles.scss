@@ -1053,7 +1053,7 @@ $mobile-small: 480px;
 
   .about-image img {
     width: 250px;
-    order: 2; /* Ensure image appears below text on tablets */
+    order: 2;
     margin-top: 20px;
   }
 
@@ -1199,7 +1199,7 @@ $mobile-small: 480px;
 
   .about-image img {
     width: 180px;
-    order: 2; /* Ensure image appears below text on small screens */
+    order: 2;
     margin-top: 20px;
   }
 
