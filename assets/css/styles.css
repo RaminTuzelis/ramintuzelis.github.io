@@ -670,25 +670,6 @@ section#projects {
   line-height: 1.6;
 }
 
-/* Contact section ---------------------------------------------------- */
-.contact-section {
-  padding: 50px 0;
-  text-align: center;
-  color: white;
-}
-
-.contact-section h2 {
-  font-size: 36px;
-  color: #9acd32;
-  margin-bottom: 20px;
-}
-
-.contact-section p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -740,6 +721,7 @@ section#projects {
   color: green;
   margin-top: 15px;
   display: none;
+  font-size: 24px;
 }
 
 .contact-form {
@@ -987,6 +969,28 @@ section#projects {
   .projects-section h2 {
     font-size: 24px;
   }
+  .project-modal-content {
+    width: 90%;
+    max-width: none;
+    height: auto;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  .project-modal-overlay {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .project-modal-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .close-modal {
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+  }
   /* Contact Section */
   .contact-section h2 {
     font-size: 24px;
@@ -1041,6 +1045,9 @@ section#projects {
   .skill-section h2 {
     font-size: 22px;
   }
+  .skill-section p {
+    padding: 10px;
+  }
   /* Certificates Section */
   .certificates-section h2 {
     font-size: 22px;
@@ -1061,7 +1068,7 @@ section#projects {
     margin: 20px;
   }
 }
-@media (max-width: 600px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .hero-text h1 {
     font-size: 22px;
   }
