@@ -1,4 +1,4 @@
-// Active Link On Navigation Bar -----------------------------------------------
+// Active Link On Navigation Bar -----------------------------------------------------------------------------------------------------------------------
 // Select all navigation links in the navigation bar
 const navLinks = document.querySelectorAll('.nav-links li a');
 
@@ -12,7 +12,7 @@ navLinks.forEach(link => {
     });
 });
 
-// Certificates Carousel -------------------------------------------------------
+// Certificates Carousel ---------------------------------------------------------------------------------------------------------------------------------
 // Select all elements with the class '.certificates-item'
 const certificates = document.querySelectorAll('.certificates-item');
 
@@ -68,7 +68,7 @@ closeModal.addEventListener('click', () => {
     modalOverlay.classList.remove('active'); // Hide the modal by removing 'active' class
 });
 
-// GSAP Animations --------------------------------------------
+// GSAP Animations ------------------------------------------------------------------------------------------------------------------------------------------
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -128,7 +128,7 @@ gsap.from(".contact-form input, .contact-form textarea, .submit-btn", {
     }
 });
 
-// Contact Form Validation ---------------------------------------------------------
+// Contact Form Validation ----------------------------------------------------------------------------------------------------------------------
 // Function to launch confetti animation when form is successfully submitted
 function launchConfetti() {
     let end = Date.now() + (3 * 1000); // Confetti duration: 3 seconds
@@ -189,7 +189,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     });
 });
 
-// Hamburger Menu ----------------------------------------------------------------
+// Hamburger Menu ----------------------------------------------------------------------------------------------------------------------------
 // Select the hamburger menu and the navigation links
 const hamburger = document.querySelector('.hamburger');
 const navHamLinks = document.querySelector('.nav-links');
