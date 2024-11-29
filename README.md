@@ -13,8 +13,8 @@ Welcome to **RaminTuzelis**, the portfolio of Karolis Mickūnas, a motivated Ful
 - [Sections Overview](#sections-overview)
 - [GSAP Animations](#gsap-animations)
 - [Contact Form](#contact-form)
+- [Confetti Effect](#confetti-effect)
 - [Responsive Design](#responsive-design)
-- [Known Issues](#known-issues)
 - [Future Improvements](#future-improvements)
 - [Contact](#contact)
 
@@ -35,6 +35,7 @@ Welcome to **RaminTuzelis**, the portfolio of Karolis Mickūnas, a motivated Ful
 - **Font Awesome** - For icons in the social media links and other sections.
 - **Devicons** - For technology icons in the Skills section.
 - **Formspree** - To handle the contact form submission via email.
+- **Confetti.js** - To add a confetti effect upon successful form submission.
 - **GitHub Pages** - For hosting the live website.
 
 ---
@@ -45,6 +46,7 @@ Welcome to **RaminTuzelis**, the portfolio of Karolis Mickūnas, a motivated Ful
 - **Skills Showcase**: Display of key technologies with icons for easy recognition.
 - **Certificates Carousel**: Interactive display of certifications earned from Udemy and other sources.
 - **Projects Display**: Overview of current and upcoming projects with detailed modal views.
+- **Confetti Effect**: A confetti animation appears after successful contact form submission.
 - **Responsive Design**: Optimized for multiple device sizes from desktop to mobile.
 - **Contact Form**: Functional contact form connected via Formspree for direct communication.
 
@@ -103,6 +105,7 @@ Welcome to **RaminTuzelis**, the portfolio of Karolis Mickūnas, a motivated Ful
 
 - Functional contact form using Formspree, allowing users to submit inquiries directly to my email.
 - Simple validation and success messages after form submission.
+- Confetti animation upon successful form submission.
 
 ---
 
@@ -125,6 +128,13 @@ These animations add a modern and interactive feel to the overall user experienc
 
 ---
 
+## Confetti Effect
+
+- **Confetti.js** is used to trigger a confetti effect when the contact form is successfully submitted.
+- The confetti effect adds a celebratory element to the user experience, enhancing feedback upon form submission.
+
+---
+
 ## Responsive Design
 
 This portfolio is fully responsive, with breakpoints for:
@@ -134,13 +144,6 @@ This portfolio is fully responsive, with breakpoints for:
 - **Mobile (600px and below)**
 
 Media queries are used in SCSS to adjust layout, font sizes, and element visibility across different devices.
-
----
-
-## Known Issues
-
-- **Modal Overlays**: The modal overlay might have minor visual glitches in older browsers.
-- **Responsive Spacing**: Some spacing adjustments for smaller screens may still need fine-tuning.
 
 ---
 
@@ -156,9 +159,9 @@ Media queries are used in SCSS to adjust layout, font sizes, and element visibil
 
 If you have any questions or would like to collaborate on a project, feel free to contact me via the following channels:
 
-- **Email**: karolis.mickunas@gmail.com
+- **Email**: k.mickunas@gmail.com
 - **LinkedIn**: [Karolis Mickūnas](https://www.linkedin.com/in/karolis-mickunas/)
-- **GitHub**: [ramintuzelis](https://github.com/ramintuzelis)
+- **GitHub**: [Ramintuzelis](https://github.com/ramintuzelis)
 
 ---
 
