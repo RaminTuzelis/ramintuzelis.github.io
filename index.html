@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>RaminTuzelis</title>
-    <link rel="icon" type="image/svg+xml" href="assets/images/KM_Logo.png">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/KM_Logo.png" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <!--    GSAP-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -17,243 +19,386 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
     <!--    Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!--    Devicons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+    />
 
     <!--    Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Background Animation -->
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-<!-- Background Animation -->
-<div class="background">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-
-<!-- Header and navigation-->
-<header>
-    <nav class="nav-bar">
+    <!-- Header and navigation-->
+    <header>
+      <nav class="nav-bar">
         <!-- Logo -->
         <div class="logo">
-            <a href="index.html"><img src="assets/images/KM_Logo.png" alt="RaminTuzelis logo"></a>
+          <a href="index.html"
+            ><img src="assets/images/KM_Logo.png" alt="RaminTuzelis logo"
+          /></a>
         </div>
         <!-- Navigation links -->
         <ul class="nav-links">
-            <li class=""><a href="#home">Home</a></li>
-            <li class=""><a href="#about">About</a></li>
-            <li class=""><a href="#skills">Skills</a></li>
-            <li class=""><a href="#projects">Projects</a></li>
-            <li class=""><a href="#contact">Contact</a></li>
+          <li class=""><a href="#home">Home</a></li>
+          <li class=""><a href="#about">About</a></li>
+          <li class=""><a href="#skills">Skills</a></li>
+          <li class=""><a href="#projects">Projects</a></li>
+          <li class=""><a href="#contact">Contact</a></li>
         </ul>
-<!--        Hambuger icon-->
+        <!--        Hambuger icon-->
         <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<!-- Hero section-->
-<section id="home" class="hero-section">
-    <div class="hero-content">
+    <!-- Hero section-->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
         <!-- Text Side -->
         <div class="hero-text">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I'm Karolis Mickūnas Full Stack Web Developer</p>
-            <div class="cta-and-icons">
-                <a href="#projects" class="hero-btn">See My Work</a>
-                <!-- Social Icons -->
-                <div class="social-icons">
-                    <a href="https://github.com/ramintuzelis" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/karolis-mickunas/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/karolyzzas" target="_blank"><i class="fab fa-facebook"></i></a>
-                </div>
+          <h1>Hi, I'm Karolis Mickūnas</h1>
+          <p>Programming Student & Aspiring Full Stack Developer</p>
+          <div class="cta-and-icons">
+            <a href="#projects" class="hero-btn">See My Work</a>
+            <!-- Social Icons -->
+            <div class="social-icons">
+              <a href="https://github.com/ramintuzelis" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/karolis-mickunas/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://www.facebook.com/karolyzzas" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
             </div>
+          </div>
         </div>
         <!-- Image Side -->
         <div class="hero-image">
-            <img src="assets/images/Me.jpg" alt="Personal Photo">
+          <img src="assets/images/Me.jpg" alt="Personal Photo" />
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!--About section-->
-<section id="about" class="about-section">
-    <div class="about-content">
+    <!--About section-->
+    <section id="about" class="about-section">
+      <div class="about-content">
         <div class="about-image">
-            <img src="assets/images/about.jpg" alt="About Me Photo">
+          <img src="assets/images/about.jpg" alt="About Me Photo" />
         </div>
         <div class="about-text">
-            <h2>About Me</h2>
-            <p>I am 30 years old from Lithuanian motivated beginner in PHP with Laravel and JavaScript with Vue. My goal is to become a Full Stack Web Developer, creating innovative solutions that enhance user experiences. Since childhood, I've been captivated by programming and technology, and I continuously learn through Udemy, YouTube, and other sources. I'm always seeking opportunities to collaborate on exciting projects and grow my skills.</p>
+          <h2>About Me</h2>
+          <p>
+            I am a programming student at SMK University of Applied Sciences,
+            building a strong foundation in software development through
+            academic work and personal projects. I have experience with
+            JavaScript, TypeScript, React, Laravel, C#, Java, C++, databases,
+            and system design. My goal is to become an independent full stack
+            developer who understands the code I write and creates practical
+            solutions to real problems.
+          </p>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!--Skills section-->
-<section id="skills" class="skill-section">
-    <h2>Skills</h2>
-    <p>Here are the main technologies I'm skilled in:</p>
-    <div class="skills-grid">
-
+    <!--Skills section-->
+    <section id="skills" class="skill-section">
+      <h2>Skills</h2>
+      <p>
+        Technologies I have studied and used in academic work and personal
+        projects:
+      </p>
+      <div class="skills-grid">
         <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"  alt="HTML5"/>
-        </div>
-
-        <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"  alt="CSS"/>
-        </div>
-
-        <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Bootstrap"/>
-        </div>
-
-        <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg"  alt="TailwindCSS"/>
-        </div>
-
-        <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"  alt="PHP"/>
-        </div>
-        <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg"  alt="Laravel"/>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
+            alt="HTML5"
+          />
         </div>
 
         <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"  alt="Mysql"/>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+            alt="CSS"
+          />
         </div>
 
         <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"  alt="JavaScript"/>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+            alt="PHP"
+          />
         </div>
         <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original-wordmark.svg"  alt="Vue.js"/>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg"
+            alt="Laravel"
+          />
         </div>
-        <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg"  alt="Wordpress"/>
-        </div>
-    </div>
-</section>
 
-<!--Certificate section-->
-<section class="certificates-section">
-    <h2>My Certificates</h2>
-    <div class="certificates-grid">
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+            alt="Mysql"
+          />
+        </div>
+
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            alt="JavaScript"
+          />
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
+          />
+        </div>
+
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
+            alt="React"
+          />
+        </div>
+
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+            alt="Next.js"
+          />
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+            alt="C#"
+          />
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+            alt="Java"
+          />
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+            alt="C++"
+          />
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+            alt="Git"
+          />
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+            alt="Docker"
+          />
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original-wordmark.svg"
+            alt="Vue.js"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Certificate section-->
+    <section class="certificates-section">
+      <h2>My Certificates</h2>
+      <div class="certificates-grid">
         <div class="certificates-item">
-            <img src="assets/images/PHP_Procedural.jpg" alt="PHP_Procedural">
+          <img src="assets/images/PHP_Procedural.jpg" alt="PHP_Procedural" />
         </div>
         <div class="certificates-item">
-            <img src="assets/images/PHP_OOP.jpg" alt="PHP_OOP">
+          <img src="assets/images/PHP_OOP.jpg" alt="PHP_OOP" />
         </div>
         <div class="certificates-item">
-            <img src="assets/images/Laravel_edwin.jpg" alt="Laravel Edwin Diaz">
+          <img src="assets/images/Laravel_edwin.jpg" alt="Laravel Edwin Diaz" />
         </div>
         <div class="certificates-item">
-            <img src="assets/images/Laravel_Piotr.jpg" alt="Laravel Piotr Jura">
+          <img src="assets/images/Laravel_Piotr.jpg" alt="Laravel Piotr Jura" />
         </div>
         <div class="certificates-item">
-            <img src="assets/images/Boostrap5.jpg" alt="Bootstrap 5">
+          <img src="assets/images/Boostrap5.jpg" alt="Bootstrap 5" />
         </div>
         <div class="certificates-item">
-            <img src="assets/images/wordpress.jpg" alt="Wordpress">
+          <img src="assets/images/wordpress.jpg" alt="Wordpress" />
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-<!--Project section-->
-<section id="projects" class="projects-section">
-    <h2>My Projects</h2>
-    <div class="project-grid">
-
+    <!--Project section-->
+    <section id="projects" class="projects-section">
+      <h2>My Projects</h2>
+      <div class="project-grid">
         <!-- Project 1: RaminTodo -->
         <div class="project-item">
-            <img class="project-img" src="assets/images/RaminTodo.png" alt="RaminTodo Project">
-            <h3>RaminTodo</h3>
-            <p>This is a simple To-Do list application where users can add, edit, delete, and mark tasks as completed. Built using Laravel, Vue.js and Inertia</p>
-            <a href="https://github.com/ramintuzelis/RaminTodo" class="project-link" target="_blank">View on GitHub</a>
+          <img
+            class="project-img"
+            src="assets/images/RaminTodo.png"
+            alt="RaminTodo Project"
+          />
+          <h3>RaminTodo</h3>
+          <p>
+            This is a simple To-Do list application where users can add, edit,
+            delete, and mark tasks as completed. Built using Laravel, Vue.js and
+            Inertia
+          </p>
+          <a
+            href="https://github.com/ramintuzelis/RaminTodo"
+            class="project-link"
+            target="_blank"
+            >View on GitHub</a
+          >
         </div>
 
         <!-- Project 2: Coming Soon -->
         <div class="project-item coming-soon">
-            <img src="assets/images/coming-soon.jpg" alt="Coming Soon Project">
-            <h3>Coming Soon</h3>
-            <p>Stay tuned for more exciting projects!</p>
+          <img src="assets/images/coming-soon.jpg" alt="Coming Soon Project" />
+          <h3>Coming Soon</h3>
+          <p>Stay tuned for more exciting projects!</p>
         </div>
-    </div>
+      </div>
 
-    <!-- Modal structure -->
-    <div class="project-modal-overlay">
+      <!-- Modal structure -->
+      <div class="project-modal-overlay">
         <div class="project-modal-content">
-            <img src="assets/images/RaminTodo.png" alt="RaminTodo Project Full View">
-            <div class="project-description">
-                <h3>RaminTodo</h3>
-                <p>
-                    RaminTodo is a comprehensive To-Do list application developed using Laravel, Vue.js, and Inertia.js. The application allows users to add new tasks, mark tasks as complete, edit or delete tasks with a smooth and user-friendly interface. It's ideal for personal task management and project tracking. This project demonstrates an understanding of back-end (Laravel), front-end (Vue.js), and seamless page navigation with Inertia.js. Users can also view completed tasks, and it features a responsive design for various device types. The project is hosted on GitHub for further inspection and collaboration.
-                </p>
-            </div>
-            <span class="close-modal">&times;</span>
+          <img
+            src="assets/images/RaminTodo.png"
+            alt="RaminTodo Project Full View"
+          />
+          <div class="project-description">
+            <h3>RaminTodo</h3>
+            <p>
+              RaminTodo is a comprehensive To-Do list application developed
+              using Laravel, Vue.js, and Inertia.js. The application allows
+              users to add new tasks, mark tasks as complete, edit or delete
+              tasks with a smooth and user-friendly interface. It's ideal for
+              personal task management and project tracking. This project
+              demonstrates an understanding of back-end (Laravel), front-end
+              (Vue.js), and seamless page navigation with Inertia.js. Users can
+              also view completed tasks, and it features a responsive design for
+              various device types. The project is hosted on GitHub for further
+              inspection and collaboration.
+            </p>
+          </div>
+          <span class="close-modal">&times;</span>
         </div>
-    </div>
+      </div>
+    </section>
 
-</section>
-
-<!--Contact section-->
-<section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <p>If you have any questions or collaboration ideas, feel free to contact me!</p>
-    <form action="https://formspree.io/f/xyzgablw" method="POST" class="contact-form" id="contactForm">
+    <!--Contact section-->
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <p>
+        If you have any questions or collaboration ideas, feel free to contact
+        me!
+      </p>
+      <form
+        action="https://formspree.io/f/xyzgablw"
+        method="POST"
+        class="contact-form"
+        id="contactForm"
+      >
         <div>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <label for="name">Your Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
         </div>
         <div>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <label for="email">Your Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
         </div>
         <div>
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          <label for="message">Your Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
         </div>
         <button type="submit" class="submit-btn">Send Message</button>
         <p id="formResponse">Message sent successfully!</p>
-    </form>
-</section>
+      </form>
+    </section>
 
-<!-- Footer -->
-<footer class="footer-section">
-    <p>&copy; 2024 Karolis Mickūnas. All Rights Reserved.</p>
-    <div class="footer-links">
+    <!-- Footer -->
+    <footer class="footer-section">
+      <p>&copy; 2024 Karolis Mickūnas. All Rights Reserved.</p>
+      <div class="footer-links">
         <a href="https://github.com/ramintuzelis" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/karolis-mickunas/" target="_blank">LinkedIn</a> |
-        <a href="https://www.facebook.com/karolyzzas" target="_blank">Facebook</a>
-    </div>
-</footer>
+        <a href="https://www.linkedin.com/in/karolis-mickunas/" target="_blank"
+          >LinkedIn</a
+        >
+        |
+        <a href="https://www.facebook.com/karolyzzas" target="_blank"
+          >Facebook</a
+        >
+      </div>
+    </footer>
 
-<script src="assets/js/scripts.js"></script>
-</body>
+    <script src="assets/js/scripts.js"></script>
+  </body>
 </html>
