@@ -22,7 +22,7 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #3E1E68;
+  background: #3e1e68;
   overflow: hidden;
   z-index: -1;
 }
@@ -41,7 +41,7 @@ body {
 
 /* Span bubbles colors */
 .background span:nth-child(1) {
-  color: #FFACAC;
+  color: #ffacac;
   top: 82%;
   left: 67%;
   animation-duration: 27s;
@@ -51,7 +51,7 @@ body {
 }
 
 .background span:nth-child(2) {
-  color: #FFACAC;
+  color: #ffacac;
   top: 3%;
   left: 89%;
   animation-duration: 50s;
@@ -61,7 +61,7 @@ body {
 }
 
 .background span:nth-child(3) {
-  color: #583C87;
+  color: #583c87;
   top: 88%;
   left: 92%;
   animation-duration: 54s;
@@ -71,7 +71,7 @@ body {
 }
 
 .background span:nth-child(4) {
-  color: #E45A84;
+  color: #e45a84;
   top: 68%;
   left: 41%;
   animation-duration: 48s;
@@ -81,7 +81,7 @@ body {
 }
 
 .background span:nth-child(5) {
-  color: #583C87;
+  color: #583c87;
   top: 11%;
   left: 13%;
   animation-duration: 14s;
@@ -91,7 +91,7 @@ body {
 }
 
 .background span:nth-child(6) {
-  color: #FFACAC;
+  color: #ffacac;
   top: 28%;
   left: 38%;
   animation-duration: 17s;
@@ -101,7 +101,7 @@ body {
 }
 
 .background span:nth-child(7) {
-  color: #E45A84;
+  color: #e45a84;
   top: 98%;
   left: 47%;
   animation-duration: 35s;
@@ -111,7 +111,7 @@ body {
 }
 
 .background span:nth-child(8) {
-  color: #E45A84;
+  color: #e45a84;
   top: 33%;
   left: 31%;
   animation-duration: 52s;
@@ -121,7 +121,7 @@ body {
 }
 
 .background span:nth-child(9) {
-  color: #FFACAC;
+  color: #ffacac;
   top: 83%;
   left: 70%;
   animation-duration: 11s;
@@ -131,7 +131,7 @@ body {
 }
 
 .background span:nth-child(10) {
-  color: #E45A84;
+  color: #e45a84;
   top: 15%;
   left: 88%;
   animation-duration: 10s;
@@ -153,7 +153,8 @@ body {
 .logo img {
   width: 80px;
   height: 80px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .nav-bar {
@@ -187,7 +188,6 @@ body {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #9acd32;
 }
@@ -452,7 +452,8 @@ section#skills {
 .certificates-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 
@@ -553,12 +554,18 @@ section#projects {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 300px;
+  min-height: 520px;
   text-align: center;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-item img {
   width: 100%;
+  aspect-ratio: 16/10;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -573,6 +580,7 @@ section#projects {
   font-size: 16px;
   color: #fff;
   margin-bottom: 20px;
+  min-height: 135px;
 }
 
 .project-link {
@@ -582,6 +590,7 @@ section#projects {
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  margin-top: auto;
 }
 
 .project-link:hover {
@@ -697,6 +706,10 @@ section#projects {
   border-radius: 5px;
   font-size: 16px;
   color: #333;
+}
+
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+  color: #888;
 }
 
 .contact-form input::placeholder,
@@ -878,7 +891,8 @@ section#projects {
   .contact-section h2 {
     font-size: 28px;
   }
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     font-size: 14px;
   }
 }
@@ -996,7 +1010,8 @@ section#projects {
   .contact-section h2 {
     font-size: 24px;
   }
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     font-size: 12px;
     margin: 20px;
   }
@@ -1061,7 +1076,8 @@ section#projects {
   .contact-section h2 {
     font-size: 22px;
   }
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     font-size: 12px;
     margin: 20px;
   }
@@ -1098,6 +1114,4 @@ section#projects {
   .about-text {
     order: 1;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

@@ -24,7 +24,7 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #3E1E68;
+  background: #3e1e68;
   overflow: hidden;
   z-index: -1;
 }
@@ -43,7 +43,7 @@ body {
 
 /* Span bubbles colors */
 .background span:nth-child(1) {
-  color: #FFACAC;
+  color: #ffacac;
   top: 82%;
   left: 67%;
   animation-duration: 27s;
@@ -53,7 +53,7 @@ body {
 }
 
 .background span:nth-child(2) {
-  color: #FFACAC;
+  color: #ffacac;
   top: 3%;
   left: 89%;
   animation-duration: 50s;
@@ -63,7 +63,7 @@ body {
 }
 
 .background span:nth-child(3) {
-  color: #583C87;
+  color: #583c87;
   top: 88%;
   left: 92%;
   animation-duration: 54s;
@@ -73,7 +73,7 @@ body {
 }
 
 .background span:nth-child(4) {
-  color: #E45A84;
+  color: #e45a84;
   top: 68%;
   left: 41%;
   animation-duration: 48s;
@@ -83,17 +83,17 @@ body {
 }
 
 .background span:nth-child(5) {
-  color: #583C87;
+  color: #583c87;
   top: 11%;
   left: 13%;
   animation-duration: 14s;
   animation-delay: -48s;
   transform-origin: 22vw 8vh;
-  box-shadow: 40vmin 0 5.70vmin currentColor;
+  box-shadow: 40vmin 0 5.7vmin currentColor;
 }
 
 .background span:nth-child(6) {
-  color: #FFACAC;
+  color: #ffacac;
   top: 28%;
   left: 38%;
   animation-duration: 17s;
@@ -103,7 +103,7 @@ body {
 }
 
 .background span:nth-child(7) {
-  color: #E45A84;
+  color: #e45a84;
   top: 98%;
   left: 47%;
   animation-duration: 35s;
@@ -113,7 +113,7 @@ body {
 }
 
 .background span:nth-child(8) {
-  color: #E45A84;
+  color: #e45a84;
   top: 33%;
   left: 31%;
   animation-duration: 52s;
@@ -123,17 +123,17 @@ body {
 }
 
 .background span:nth-child(9) {
-  color: #FFACAC;
+  color: #ffacac;
   top: 83%;
   left: 70%;
   animation-duration: 11s;
   animation-delay: -49s;
   transform-origin: 1vw 14vh;
-  box-shadow: -40vmin 0 5.10vmin currentColor;
+  box-shadow: -40vmin 0 5.1vmin currentColor;
 }
 
 .background span:nth-child(10) {
-  color: #E45A84;
+  color: #e45a84;
   top: 15%;
   left: 88%;
   animation-duration: 10s;
@@ -154,8 +154,9 @@ body {
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .nav-bar {
@@ -250,20 +251,31 @@ body {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: limegreen; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: limegreen;
+  }
 }
 
 .hero-text p {
   overflow: hidden;
   white-space: nowrap;
-  border-right: .15em solid limegreen;
-  animation: typing 3.5s steps(40, end), blink-caret .70s step-end 4;
+  border-right: 0.15em solid limegreen;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.7s step-end 4;
   font-size: 24px;
   margin-bottom: 30px;
   animation-fill-mode: forwards;
@@ -274,7 +286,6 @@ body {
   display: none;
 }
 
-
 .hero-btn {
   padding: 15px 30px;
   background-color: #9acd32;
@@ -282,7 +293,9 @@ body {
   text-decoration: none;
   font-size: 18px;
   border-radius: 8px;
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
   display: inline-block;
 }
 
@@ -296,7 +309,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 
 .hero-image img {
   width: 400px;
@@ -389,7 +401,6 @@ section#skills {
   padding-top: 120px;
   color: white;
 }
-
 
 .skills-grid {
   display: flex;
@@ -534,7 +545,6 @@ section#skills {
   background-color: #9acd32;
 }
 
-
 // Projects section ----------------------------------------------------
 
 section#projects {
@@ -564,12 +574,17 @@ section#projects {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 300px;
+  min-height: 520px;
   text-align: center;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-item img {
   width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -584,6 +599,7 @@ section#projects {
   font-size: 16px;
   color: #fff;
   margin-bottom: 20px;
+  min-height: 135px;
 }
 
 .project-link {
@@ -593,18 +609,16 @@ section#projects {
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  margin-top: auto;
 }
 
 .project-link:hover {
-    background-color: #82b732;
+  background-color: #82b732;
 }
 
 .project-item:hover {
   transform: scale(1.05);
 }
-
-
-
 
 // Project Modal styles ----------------------------------------------------
 
@@ -748,7 +762,6 @@ section#projects {
   gap: 15px;
 }
 
-
 // Footer styles ----------------------------------------------------
 .footer-section {
   background-color: #222;
@@ -772,7 +785,6 @@ section#projects {
 .footer-links a:hover {
   text-decoration: underline;
 }
-
 
 // Responsive styles ----------------------------------------------------
 
@@ -829,37 +841,34 @@ $mobile-small: 480px;
     margin: 10px;
   }
 
-    .skill-section h2 {
-        font-size: 30px;
-    }
+  .skill-section h2 {
+    font-size: 30px;
+  }
 
-    .skill-section p {
-        font-size: 16px;
-    }
+  .skill-section p {
+    font-size: 16px;
+  }
 
   /* Certificates Section */
 
-    .certificates-section h2 {
-        font-size: 30px;
-    }
+  .certificates-section h2 {
+    font-size: 30px;
+  }
 
   /* Project Section */
 
-        .projects-section h2 {
-            font-size: 30px;
-        }
+  .projects-section h2 {
+    font-size: 30px;
+  }
 
   /* Contact Section */
 
-    .contact-section h2 {
-        font-size: 30px;
-    }
-
-
+  .contact-section h2 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: $desktop) {
-
   .hero-section {
     padding: 0 40px;
     flex-direction: column;
@@ -945,7 +954,8 @@ $mobile-small: 480px;
     font-size: 28px;
   }
 
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     font-size: 14px;
   }
 }
@@ -960,7 +970,9 @@ $mobile-small: 480px;
     top: 80px;
     left: 0;
     width: 100%;
-    transition: transform 0.7s ease, opacity 0.7s ease;
+    transition:
+      transform 0.7s ease,
+      opacity 0.7s ease;
     z-index: 999;
     opacity: 0;
     transform: translateY(-100%);
@@ -1088,7 +1100,8 @@ $mobile-small: 480px;
     font-size: 24px;
   }
 
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     font-size: 12px;
     margin: 20px;
   }
@@ -1161,8 +1174,6 @@ $mobile-small: 480px;
     font-size: 22px;
   }
 
-
-
   /* Projects Section */
   .projects-section h2 {
     font-size: 22px;
@@ -1173,7 +1184,8 @@ $mobile-small: 480px;
     font-size: 22px;
   }
 
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     font-size: 12px;
     margin: 20px;
   }
@@ -1220,7 +1232,3 @@ $mobile-small: 480px;
     order: 1;
   }
 }
-
-
-
-

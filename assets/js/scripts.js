@@ -53,14 +53,28 @@ certificates.forEach((certificate) => {
 });
 
 // Projects Modal ----------------------------------------------------------------
-// Select project image and modal elements
-const projectImg = document.querySelector(".project-img");
+
+const projectImages = document.querySelectorAll(".project-img");
+const modalImage = document.querySelector(".project-modal-img");
+const modalTitle = document.querySelector(".project-modal-title");
+const modalText = document.querySelector(".project-modal-text");
 const modalOverlay = document.querySelector(".project-modal-overlay");
 const closeModal = document.querySelector(".close-modal");
 
-// Open the modal when the project image is clicked
-projectImg.addEventListener("click", () => {
-  modalOverlay.classList.add("active"); // Show the modal by adding 'active' class
+projectImages.forEach((projectImage) => {
+  projectImage.addEventListener("click", () => {
+    const projectItem = projectImage.closest(".project-item");
+    const projectTitle = projectItem.querySelector("h3").textContent;
+    const projectText = projectItem.querySelector("p").textContent;
+    const projectImageSrc = projectImage.getAttribute("src");
+
+    modalImage.src = projectImageSrc;
+    modalImage.alt = `${projectTitle} Project Full View`;
+    modalTitle.textContent = projectTitle;
+    modalText.textContent = projectText;
+
+    modalOverlay.classList.add("active");
+  });
 });
 
 // Close the modal when the close button is clicked

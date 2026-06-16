@@ -1,0 +1,4 @@
+node_modules/
+.git/
+assets/css/styles.css
+assets/css/styles.css.map

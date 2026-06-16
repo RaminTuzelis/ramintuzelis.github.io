@@ -56,15 +56,15 @@ Welcome to **RaminTuzelis**, the portfolio of Karolis Mickūnas, a motivated Ful
 
 1. Clone the repository from GitHub:
 
-    ```bash
-    git clone https://github.com/ramintuzelis/portfolio.git
-    ```
+   ```bash
+   git clone https://github.com/ramintuzelis/portfolio.git
+   ```
 
 2. Navigate into the project directory:
 
-    ```bash
-    cd portfolio
-    ```
+   ```bash
+   cd portfolio
+   ```
 
 3. Open the `index.html` file in your browser, or use a live server such as VS Code's Live Server plugin.
 
