@@ -82,54 +82,9 @@ closeModal.addEventListener("click", () => {
   modalOverlay.classList.remove("active"); // Hide the modal by removing 'active' class
 });
 
-// GSAP Animations ------------------------------------------------------------------------------------------------------------------------------------------
-// Register ScrollTrigger plugin
+// GSAP Animations ----------------------------------------------------------------
 gsap.registerPlugin(ScrollTrigger);
 
-// Animation for skills section (fades in and moves up each skill item)
-gsap.from(".skills-grid .skill-item", {
-  opacity: 0, // Start with zero opacity
-  y: 50, // Start 50px below its final position
-  stagger: 0.2, // Delay each item by 0.2 seconds
-  duration: 1.5, // Animation lasts 1.5 seconds
-  ease: "power4.out", // Smooth easing effect
-  scrollTrigger: {
-    // Trigger animation when the section comes into view
-    trigger: "#skills",
-    start: "top 80%",
-    toggleActions: "play none none none",
-  },
-});
-
-// Animation for certificates section
-gsap.from(".certificates-grid .certificates-item", {
-  opacity: 0,
-  y: 50,
-  stagger: 0.2,
-  duration: 1.5,
-  ease: "power4.out",
-  scrollTrigger: {
-    trigger: ".certificates-section",
-    start: "top 80%",
-    toggleActions: "play none none none",
-  },
-});
-
-// Animation for projects section
-gsap.from(".project-item", {
-  opacity: 0,
-  y: 50,
-  stagger: 0.2,
-  duration: 1.5,
-  ease: "power4.out",
-  scrollTrigger: {
-    trigger: ".projects-section",
-    start: "top 80%",
-    toggleActions: "play none none none",
-  },
-});
-
-// Animation for contact form fields
 gsap.from(".contact-form input, .contact-form textarea, .submit-btn", {
   opacity: 0,
   y: 50,
