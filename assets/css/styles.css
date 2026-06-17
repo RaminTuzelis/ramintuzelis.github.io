@@ -387,7 +387,7 @@ section#skills {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(2, 6, 23, 0.82);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -405,11 +405,12 @@ section#skills {
 .overlay-content {
   position: relative;
   width: 80%;
-  max-width: 600px;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  max-width: 760px;
+  background-color: rgba(30, 41, 59, 0.92);
+  padding: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
   transform: scale(0.9);
   transition: transform 0.5s ease-in-out;
 }
@@ -429,8 +430,9 @@ section#skills {
   top: -20px;
   right: -20px;
   font-size: 24px;
-  color: white;
-  background-color: #444;
+  color: #f8fafc;
+  background-color: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -438,12 +440,13 @@ section#skills {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .close-overlay:hover {
-  background-color: #9acd32;
+  background-color: rgba(56, 189, 248, 0.18);
+  border-color: #38bdf8;
 }
 
 section#projects {
@@ -457,7 +460,7 @@ section#projects {
 
 .projects-section h2 {
   font-size: 36px;
-  color: #9acd32;
+  color: #38bdf8;
   margin-bottom: 30px;
 }
 
@@ -469,10 +472,11 @@ section#projects {
 }
 
 .project-item {
-  background-color: #333;
+  background-color: rgba(30, 41, 59, 0.92);
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
   width: 300px;
   min-height: 520px;
   text-align: center;
@@ -492,33 +496,35 @@ section#projects {
 
 .project-item h3 {
   font-size: 24px;
-  color: #9acd32;
+  color: #38bdf8;
   margin-bottom: 10px;
 }
 
 .project-item p {
   font-size: 16px;
-  color: #fff;
+  color: #cbd5e1;
   margin-bottom: 20px;
   min-height: 135px;
 }
 
 .project-link {
-  background-color: #9acd32;
-  color: white;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #082f49;
   text-decoration: none;
   padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: auto;
 }
 
 .project-link:hover {
-  background-color: #82b732;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(56, 189, 248, 0.25);
 }
 
 .project-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px);
 }
 
 .project-modal-overlay {
@@ -527,7 +533,7 @@ section#projects {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(2, 6, 23, 0.82);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -546,6 +552,11 @@ section#projects {
   position: relative;
   width: 80%;
   max-width: 800px;
+  background-color: rgba(30, 41, 59, 0.92);
+  padding: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
   transform: scale(0.9);
   transition: transform 0.5s ease-in-out;
 }
@@ -564,8 +575,9 @@ section#projects {
   top: -20px;
   right: -20px;
   font-size: 24px;
-  background-color: #444;
-  color: white;
+  color: #f8fafc;
+  background-color: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -573,12 +585,13 @@ section#projects {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .close-modal:hover {
-  background-color: #9acd32;
+  background-color: rgba(56, 189, 248, 0.18);
+  border-color: #38bdf8;
 }
 
 /* Contact section ---------------------------------------------------- */

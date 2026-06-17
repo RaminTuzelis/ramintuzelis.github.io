@@ -1,28 +1,19 @@
-// Active Link On Navigation Bar -----------------------------------------------------------------------------------------------------------------------
-// Select all navigation links in the navigation bar
+// Active Link On Navigation Bar ------------------------------------------------------------------------
 const navLinks = document.querySelectorAll(".nav-links li a");
-
-// Add active class to the current link (highlight it)
 navLinks.forEach((link) => {
   link.addEventListener("click", function () {
-    // Remove the 'active' class from all links
     navLinks.forEach((link) => link.classList.remove("active"));
-    // Add the 'active' class to the clicked link
     this.classList.add("active");
   });
 });
 
-// Certificates Carousel ---------------------------------------------------------------------------------------------------------------------------------
-// Select all elements with the class '.certificates-item'
+// Certificates --------------------------------------------------------------------------------
 const certificates = document.querySelectorAll(".certificates-item");
-
-// Add event listener to each certificate
 certificates.forEach((certificate) => {
   certificate.addEventListener("click", () => {
-    const imgSrc = certificate.querySelector("img").src; // Get the image source
-    const overlay = document.createElement("div"); // Create a new 'div' element
+    const imgSrc = certificate.querySelector("img").src;
+    const overlay = document.createElement("div");
 
-    // Add 'overlay' class to the new div and set its content with the image and close button
     overlay.classList.add("overlay");
     overlay.innerHTML = `
             <div class="overlay-content">
@@ -31,24 +22,34 @@ certificates.forEach((certificate) => {
             </div>
         `;
 
-    // Append the overlay to the body
     document.body.appendChild(overlay);
-
-    // Trigger the animation by adding 'active' class after a small delay
     setTimeout(() => {
       overlay.classList.add("active");
-    }, 10); // 10ms delay to trigger CSS transition
+    }, 10);
 
-    // Close overlay event listener
     const closeOverlay = overlay.querySelector(".close-overlay");
-    closeOverlay.addEventListener("click", () => {
-      // Remove the 'active' class to start closing animation
+    const closeCertificateOverlay = () => {
       overlay.classList.remove("active");
-      // Remove the overlay from the DOM after animation completes
+      document.removeEventListener("keydown", handleCertificateOverlayKeydown);
+
       setTimeout(() => {
         document.body.removeChild(overlay);
-      }, 500); // Wait for 500ms for the animation to finish
+      }, 500);
+    };
+
+    closeOverlay.addEventListener("click", closeCertificateOverlay);
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) {
+        closeCertificateOverlay();
+      }
     });
+
+    const handleCertificateOverlayKeydown = (event) => {
+      if (event.key === "Escape") {
+        closeCertificateOverlay();
+      }
+    };
+    document.addEventListener("keydown", handleCertificateOverlayKeydown);
   });
 });
 
@@ -60,6 +61,10 @@ const modalTitle = document.querySelector(".project-modal-title");
 const modalText = document.querySelector(".project-modal-text");
 const modalOverlay = document.querySelector(".project-modal-overlay");
 const closeModal = document.querySelector(".close-modal");
+
+const closeProjectModal = () => {
+  modalOverlay.classList.remove("active");
+};
 
 projectImages.forEach((projectImage) => {
   projectImage.addEventListener("click", () => {
@@ -77,9 +82,18 @@ projectImages.forEach((projectImage) => {
   });
 });
 
-// Close the modal when the close button is clicked
-closeModal.addEventListener("click", () => {
-  modalOverlay.classList.remove("active"); // Hide the modal by removing 'active' class
+closeModal.addEventListener("click", closeProjectModal);
+
+modalOverlay.addEventListener("click", (event) => {
+  if (event.target === modalOverlay) {
+    closeProjectModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && modalOverlay.classList.contains("active")) {
+    closeProjectModal();
+  }
 });
 
 // GSAP Animations ----------------------------------------------------------------
