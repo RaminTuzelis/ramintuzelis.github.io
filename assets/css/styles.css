@@ -387,6 +387,11 @@ section#skills {
   object-fit: cover;
 }
 
+.certificate-portrait img {
+  object-fit: contain;
+  background-color: #d8d6cf;
+}
+
 .certificates-item:hover {
   transform: translateY(-6px);
   border-color: rgba(56, 189, 248, 0.75);
@@ -416,8 +421,9 @@ section#skills {
 
 .certificate-modal-content {
   position: relative;
-  width: 80%;
-  max-width: 760px;
+  width: fit-content;
+  max-width: min(80%, 760px);
+  max-height: calc(100vh - 96px);
   background-color: rgba(30, 41, 59, 0.92);
   padding: 18px;
   border: 1px solid rgba(56, 189, 248, 0.22);
@@ -432,7 +438,12 @@ section#skills {
 }
 
 .certificate-modal-content img {
-  width: 100%;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 132px);
+  object-fit: contain;
+  background-color: #d8d6cf;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
