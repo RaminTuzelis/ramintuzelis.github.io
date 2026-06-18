@@ -35,7 +35,8 @@ body {
 .logo img {
   width: 80px;
   height: 80px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .nav-bar {
@@ -344,7 +345,8 @@ section#skills {
 .skill-item img {
   width: 72px;
   height: 72px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .skill-item p {
@@ -389,11 +391,13 @@ section#skills {
 .certificates-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .certificate-portrait img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: #d8d6cf;
 }
 
@@ -426,6 +430,7 @@ section#skills {
 
 .certificate-modal-content {
   position: relative;
+  width: -moz-fit-content;
   width: fit-content;
   max-width: min(80%, 760px);
   max-height: calc(100vh - 96px);
@@ -447,7 +452,8 @@ section#skills {
   width: auto;
   max-width: 100%;
   max-height: calc(100vh - 132px);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: #d8d6cf;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -516,7 +522,8 @@ section#projects {
 .project-item img {
   width: 100%;
   aspect-ratio: 16/10;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -653,7 +660,7 @@ section#projects {
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.34);
 }
 
-.contact-form div {
+.form-field {
   margin-bottom: 20px;
   text-align: left;
 }
@@ -683,6 +690,10 @@ section#projects {
   min-height: 140px;
   max-height: 320px;
   resize: vertical;
+}
+
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+  color: rgba(203, 213, 225, 0.58);
 }
 
 .contact-form input::placeholder,
@@ -721,6 +732,23 @@ section#projects {
   margin-top: 18px;
   color: #67e8f9;
   font-size: 16px;
+}
+
+.field-error {
+  display: none;
+  margin-top: 8px;
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+.form-field.error .field-error {
+  display: block;
+}
+
+.form-field.error input,
+.form-field.error textarea {
+  border-color: rgba(248, 113, 113, 0.8);
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.12);
 }
 
 .footer-section {
@@ -1058,6 +1086,4 @@ section#projects {
   .contact-form {
     padding: 20px;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

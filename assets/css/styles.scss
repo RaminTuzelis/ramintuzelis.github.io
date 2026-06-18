@@ -704,7 +704,7 @@ section#projects {
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.34);
 }
 
-.contact-form div {
+.form-field {
   margin-bottom: 20px;
   text-align: left;
 }
@@ -777,6 +777,23 @@ section#projects {
   margin-top: 18px;
   color: #67e8f9;
   font-size: 16px;
+}
+
+.field-error {
+  display: none;
+  margin-top: 8px;
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+.form-field.error .field-error {
+  display: block;
+}
+
+.form-field.error input,
+.form-field.error textarea {
+  border-color: rgba(248, 113, 113, 0.8);
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.12);
 }
 
 // Footer styles ----------------------------------------------------

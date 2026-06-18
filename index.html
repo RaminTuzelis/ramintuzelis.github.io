@@ -358,7 +358,7 @@
         class="contact-form"
         id="contactForm"
       >
-        <div>
+        <div class="form-field">
           <label for="name">Your Name</label>
           <input
             type="text"
@@ -367,8 +367,9 @@
             placeholder="Karolis Mickūnas"
             required
           />
+          <p class="field-error" id="nameError"></p>
         </div>
-        <div>
+        <div class="form-field">
           <label for="email">Your Email</label>
           <input
             type="email"
@@ -377,8 +378,9 @@
             placeholder="karolis@example.com"
             required
           />
+          <p class="field-error" id="emailError"></p>
         </div>
-        <div>
+        <div class="form-field">
           <label for="message">Your Message</label>
           <textarea
             id="message"
@@ -387,6 +389,7 @@
             rows="5"
             required
           ></textarea>
+          <p class="field-error" id="messageError"></p>
         </div>
         <button type="submit" class="submit-btn">Send Message</button>
         <p id="formResponse">Message sent successfully!</p>
