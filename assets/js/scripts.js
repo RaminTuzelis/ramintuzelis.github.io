@@ -1,20 +1,76 @@
 // Active Link On Navigation Bar ------------------------------------------------------------------------
 const navLinks = document.querySelectorAll(".nav-links li a");
+const hamburger = document.querySelector(".hamburger");
+const navHamLinks = document.querySelector(".nav-links");
+const pageSections = Array.from(navLinks)
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+let isNavLinkClickScrolling = false;
+
+const closeMobileMenu = () => {
+  hamburger.classList.remove("active");
+  navHamLinks.classList.remove("active");
+};
+
+const setActiveNavLink = (sectionId) => {
+  navLinks.forEach((link) => {
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === `#${sectionId}`
+    );
+  });
+};
+
+const updateActiveNavLink = () => {
+  if (isNavLinkClickScrolling) {
+    return;
+  }
+
+  const scrollPosition = window.scrollY + 140;
+  let currentSection = pageSections[0];
+
+  pageSections.forEach((section) => {
+    if (section.offsetTop <= scrollPosition) {
+      currentSection = section;
+    }
+  });
+
+  const isAtPageBottom =
+    window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
+
+  if (isAtPageBottom) {
+    currentSection = pageSections[pageSections.length - 1];
+  }
+
+  if (currentSection) {
+    setActiveNavLink(currentSection.id);
+  }
+};
+
 navLinks.forEach((link) => {
-  link.addEventListener("click", function () {
-    navLinks.forEach((link) => link.classList.remove("active"));
-    this.classList.add("active");
+  link.addEventListener("click", () => {
+    const targetSectionId = link.getAttribute("href").replace("#", "");
+
+    isNavLinkClickScrolling = true;
+    setActiveNavLink(targetSectionId);
+    closeMobileMenu();
+
+    setTimeout(() => {
+      isNavLinkClickScrolling = false;
+      updateActiveNavLink();
+    }, 900);
   });
 });
 
 // Hamburger Menu -------------------------------------------------------------------------------
-const hamburger = document.querySelector(".hamburger");
-const navHamLinks = document.querySelector(".nav-links");
-
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navHamLinks.classList.toggle("active");
 });
+
+window.addEventListener("scroll", updateActiveNavLink);
+window.addEventListener("load", updateActiveNavLink);
+updateActiveNavLink();
 
 // Certificates --------------------------------------------------------------------------------
 const certificates = document.querySelectorAll(".certificates-item");
@@ -134,3 +190,21 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 // Update footer year automatically --------------------------------------------------------------
 const currentYear = document.getElementById("currentYear");
 currentYear.textContent = new Date().getFullYear();
+
+// Scroll To Top -------------------------------------------------------------------------------
+const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    scrollToTopButton.classList.add("active");
+  } else {
+    scrollToTopButton.classList.remove("active");
+  }
+});
+
+scrollToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
