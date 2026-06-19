@@ -161,11 +161,105 @@ document.addEventListener("keydown", (event) => {
 });
 
 // Contact Form Validation ---------------------------------------------------------------------
-document.getElementById("contactForm").addEventListener("submit", function (e) {
+const contactForm = document.getElementById("contactForm");
+
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+const formResponse = document.getElementById("formResponse");
+const submitButton = contactForm.querySelector(".submit-btn");
+
+const showError = (input, errorElement, message) => {
+  const formField = input.closest(".form-field");
+
+  formField.classList.add("error");
+  errorElement.textContent = message;
+};
+
+const clearError = (input, errorElement) => {
+  const formField = input.closest(".form-field");
+
+  formField.classList.remove("error");
+  errorElement.textContent = "";
+};
+
+const isValidEmail = (email) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+
+const showFormResponse = (message, type) => {
+  formResponse.textContent = message;
+  formResponse.className = type;
+  formResponse.style.display = "block";
+};
+
+const hideFormResponse = () => {
+  formResponse.textContent = "";
+  formResponse.className = "";
+  formResponse.style.display = "none";
+};
+
+const validateContactForm = () => {
+  let isValid = true;
+
+  if (nameInput.value.trim() === "") {
+    showError(nameInput, nameError, "Please enter your name.");
+    isValid = false;
+  } else {
+    clearError(nameInput, nameError);
+  }
+
+  const emailValue = emailInput.value.trim();
+
+  if (emailValue === "") {
+    showError(emailInput, emailError, "Please enter your email.");
+    isValid = false;
+  } else if (!isValidEmail(emailValue)) {
+    showError(emailInput, emailError, "Please enter a valid email address.");
+    isValid = false;
+  } else {
+    clearError(emailInput, emailError);
+  }
+
+  if (messageInput.value.trim() === "") {
+    showError(messageInput, messageError, "Please enter your message.");
+    isValid = false;
+  } else {
+    clearError(messageInput, messageError);
+  }
+
+  return isValid;
+};
+
+nameInput.addEventListener("input", () => {
+  clearError(nameInput, nameError);
+});
+
+emailInput.addEventListener("input", () => {
+  clearError(emailInput, emailError);
+});
+
+messageInput.addEventListener("input", () => {
+  clearError(messageInput, messageError);
+});
+
+contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
+  hideFormResponse();
+
+  if (!validateContactForm()) {
+    return;
+  }
 
   let form = this;
   let formData = new FormData(form);
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
 
   fetch(form.action, {
     method: form.method,
@@ -176,14 +270,24 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   })
     .then(function (response) {
       if (response.ok) {
-        document.getElementById("formResponse").style.display = "block";
+        showFormResponse("Message sent successfully!", "success");
         form.reset();
       } else {
-        alert("There was a problem sending the message.");
+        showFormResponse(
+          "Something went wrong. Please try again later.",
+          "error"
+        );
       }
     })
     .catch(function (error) {
-      alert("There was an error submitting the form.");
+      showFormResponse(
+        "Network error. Please check your connection and try again.",
+        "error"
+      );
+    })
+    .finally(function () {
+      submitButton.disabled = false;
+      submitButton.textContent = "Send Message";
     });
 });
 
