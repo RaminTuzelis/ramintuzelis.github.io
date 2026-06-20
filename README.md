@@ -1,168 +1,121 @@
-# RaminTuzelis - Portfolio Project
+![RaminTuzelis developer banner](assets/images/ramintuzelis-banner.png)
 
-Welcome to **RaminTuzelis**, the portfolio of Karolis Mickūnas, a motivated Full Stack Web Developer. This project showcases my skills, technologies I've worked with, my projects, and my journey in web development.
+<h1 align="center">RaminTuzelis Portfolio</h1>
 
----
+<p align="center">
+  Personal portfolio of Karolis Mickunas, a programming student and aspiring full stack developer from Lithuania.
+</p>
 
-## Table of Contents
+<p align="center">
+  <a href="https://ramintuzelis.github.io/">Live website</a>
+  &nbsp;|&nbsp;
+  <a href="https://ramintuzelis.github.io/#projects">Projects</a>
+  &nbsp;|&nbsp;
+  <a href="#local-development">Local development</a>
+</p>
 
-- [Project Description](#project-description)
-- [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Installation and Setup Instructions](#installation-and-setup-instructions)
-- [Sections Overview](#sections-overview)
-- [GSAP Animations](#gsap-animations)
-- [Contact Form](#contact-form)
-- [Confetti Effect](#confetti-effect)
-- [Responsive Design](#responsive-design)
-- [Future Improvements](#future-improvements)
-- [Contact](#contact)
+## About
 
----
+This portfolio presents my learning journey, academic work, personal projects, certificates, and the technologies I have studied and used. It is built as a lightweight single-page website with HTML, SCSS, and vanilla JavaScript.
 
-## Project Description
+The current version focuses on an honest developer identity, responsive design, accessible interactions, and real projects created during my programming studies.
 
-**RaminTuzelis** is a personal portfolio website designed to showcase my skills and projects as a Full Stack Web Developer. The site was built using modern web development tools such as HTML, SCSS, and JavaScript with additional libraries like GSAP for animations. This project also integrates various sections such as a personal introduction, skills overview, certificates, projects, and a contact form.
+## Highlights
 
----
+- Responsive single-page layout for desktop, tablet, and mobile screens.
+- Dark navy and cyan visual identity built around the RaminTuzelis brand.
+- Typewriter hero animation with a mobile-friendly fallback.
+- Active navigation state and smooth section scrolling.
+- Interactive certificate and project modals.
+- Custom contact form validation and Formspree submission.
+- Loading, success, server error, and network error states.
+- Scroll-to-top control and automatic footer year.
 
-## Technologies Used
+## Portfolio Stack
 
-- **HTML5** - For semantic structure of the website.
-- **SCSS (Sassy CSS)** - For custom styling and better CSS management.
-- **JavaScript (Vanilla)** - For interactive elements and features.
-- **GSAP (GreenSock Animation Platform)** - For smooth animations and scroll-triggered effects.
-- **Font Awesome** - For icons in the social media links and other sections.
-- **Devicons** - For technology icons in the Skills section.
-- **Formspree** - To handle the contact form submission via email.
-- **Confetti.js** - To add a confetti effect upon successful form submission.
-- **GitHub Pages** - For hosting the live website.
+- HTML5
+- SCSS and Dart Sass
+- Vanilla JavaScript
+- Formspree
+- Font Awesome
+- Devicon
+- Google Fonts
+- Prettier
+- GitHub Pages
 
----
+## Local Development
 
-## Features
+### Requirements
 
-- **Animated Hero Section**: A welcoming hero section with GSAP-driven animations.
-- **Skills Showcase**: Display of key technologies with icons for easy recognition.
-- **Certificates Carousel**: Interactive display of certifications earned from Udemy and other sources.
-- **Projects Display**: Overview of current and upcoming projects with detailed modal views.
-- **Confetti Effect**: A confetti animation appears after successful contact form submission.
-- **Responsive Design**: Optimized for multiple device sizes from desktop to mobile.
-- **Contact Form**: Functional contact form connected via Formspree for direct communication.
+- Git
+- Node.js and npm
+- A local web server such as the VS Code Live Server extension
 
----
+### Setup
 
-## Installation and Setup Instructions
+```bash
+git clone https://github.com/Ramintuzelis/ramintuzelis.github.io.git
+cd ramintuzelis.github.io
+npm install
+npm run build:css
+```
 
-1. Clone the repository from GitHub:
+Open `index.html` with Live Server to run the portfolio locally.
 
-   ```bash
-   git clone https://github.com/ramintuzelis/portfolio.git
-   ```
+### Development Commands
 
-2. Navigate into the project directory:
+Watch SCSS and rebuild CSS after every change:
 
-   ```bash
-   cd portfolio
-   ```
+```bash
+npm run watch:css
+```
 
-3. Open the `index.html` file in your browser, or use a live server such as VS Code's Live Server plugin.
+Build CSS once:
 
-4. Ensure all external dependencies are available (e.g., GSAP, Font Awesome, Devicons).
+```bash
+npm run build:css
+```
 
----
+Format project files:
 
-## Sections Overview
+```bash
+npm run format
+```
 
-### 1. Hero Section
+Check formatting without changing files:
 
-- A dynamic introduction with animated text effects.
-- Social media icons (GitHub, LinkedIn, Facebook) linking to external profiles.
-- "See My Work" button linking to the Projects section.
+```bash
+npm run format:check
+```
 
-### 2. About Section
+## Project Structure
 
-- A short biography introducing myself as a Full Stack Web Developer.
-- Picture and description of my goals, interests, and journey.
-
-### 3. Skills Section
-
-- Key technologies that I am proficient in.
-- Technologies such as HTML, CSS, JavaScript, Laravel, Vue.js, MySQL, TailwindCSS, and more are displayed with icons.
-
-### 4. Certificates Section
-
-- A visual showcase of certificates earned from completing various web development courses.
-- Each certificate can be clicked to enlarge and view in more detail.
-
-### 5. Projects Section
-
-- A grid display of current projects, including a link to the GitHub repository.
-- Modal views for detailed project descriptions.
-- A "Coming Soon" placeholder for future projects.
-
-### 6. Contact Section
-
-- Functional contact form using Formspree, allowing users to submit inquiries directly to my email.
-- Simple validation and success messages after form submission.
-- Confetti animation upon successful form submission.
-
----
-
-## GSAP Animations
-
-The project uses GSAP to create smooth animations and scroll-triggered effects across the site. For example:
-
-- **Hero Section**: Text typing effect and fade-in animations.
-- **Skills and Projects Section**: Elements fade in and slide from the bottom when scrolled into view.
-
-These animations add a modern and interactive feel to the overall user experience.
-
----
+```text
+ramintuzelis.github.io/
+|-- assets/
+|   |-- css/
+|   |   |-- styles.scss
+|   |   `-- styles.css
+|   |-- images/
+|   `-- js/
+|       `-- scripts.js
+|-- index.html
+|-- package.json
+`-- README.md
+```
 
 ## Contact Form
 
-- The contact form uses **Formspree** to send emails directly.
-- Simple validation is in place to ensure fields are correctly filled out before submission.
-- Upon success, a message confirmation appears, indicating that the message was sent successfully.
-
----
-
-## Confetti Effect
-
-- **Confetti.js** is used to trigger a confetti effect when the contact form is successfully submitted.
-- The confetti effect adds a celebratory element to the user experience, enhancing feedback upon form submission.
-
----
+The contact form uses custom client-side validation before sending data to Formspree. It validates required fields and email format, prevents duplicate submissions while a request is in progress, and displays inline feedback without reloading the page.
 
 ## Responsive Design
 
-This portfolio is fully responsive, with breakpoints for:
+The layout is tested across desktop, tablet, and mobile widths. The hero typewriter animation remains active while the text fits safely and is disabled on smaller mobile screens where wrapping is needed.
 
-- **Desktop (1200px and above)**
-- **Tablet (768px to 1024px)**
-- **Mobile (600px and below)**
+## Status
 
-Media queries are used in SCSS to adjust layout, font sizes, and element visibility across different devices.
+The portfolio refresh was completed in June 2026. Future updates will focus on adding new projects as they are built and understood, rather than adding placeholder content.
 
----
+## License
 
-## Future Improvements
-
-- **Dark Mode Toggle**: Add the option to switch between light and dark themes.
-- **Additional Animations**: Include more interactive animations, especially for the Certificates and Projects sections.
-- **More Projects**: Add new projects as they are completed.
-
----
-
-## Contact
-
-If you have any questions or would like to collaborate on a project, feel free to contact me via the following channels:
-
-- **Email**: k.mickunas@gmail.com
-- **LinkedIn**: [Karolis Mickūnas](https://www.linkedin.com/in/karolis-mickunas/)
-- **GitHub**: [Ramintuzelis](https://github.com/ramintuzelis)
-
----
-
-Thank you for visiting my portfolio!
+This is a personal portfolio project. No open-source license is currently provided.

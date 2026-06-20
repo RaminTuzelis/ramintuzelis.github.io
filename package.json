@@ -4,12 +4,15 @@
   "description": "Personal portfolio website for Karolis Mickunas.",
   "private": true,
   "scripts": {
+    "build:css": "sass assets/css/styles.scss assets/css/styles.css --style=expanded --source-map",
+    "watch:css": "sass assets/css/styles.scss assets/css/styles.css --style=expanded --source-map --watch",
     "format": "prettier --write index.html assets/css/styles.scss assets/js/scripts.js README.md package.json .prettierrc",
     "format:check": "prettier --check index.html assets/css/styles.scss assets/js/scripts.js README.md package.json .prettierrc"
   },
   "author": "Karolis Mickunas",
   "license": "UNLICENSED",
   "devDependencies": {
-    "prettier": "^3.8.4"
+    "prettier": "^3.8.4",
+    "sass": "^1.101.0"
   }
 }

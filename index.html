@@ -2,13 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Portfolio of Karolis Mickūnas, a programming student and aspiring full stack developer building practical software projects."
+    />
+    <meta name="theme-color" content="#0f172a" />
+
     <title>Karolis Mickūnas | Portfolio</title>
+    <link rel="canonical" href="https://ramintuzelis.github.io/" />
     <link rel="icon" type="image/png" href="assets/images/KM_Logo.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ramintuzelis.github.io/" />
+    <meta property="og:title" content="Karolis Mickūnas | Portfolio" />
+    <meta
+      property="og:description"
+      content="Programming student and aspiring full stack developer building practical software projects."
+    />
+    <meta
+      property="og:image"
+      content="https://ramintuzelis.github.io/assets/images/ramintuzelis-banner.png"
+    />
+    <meta property="og:image:alt" content="RaminTuzelis developer banner" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Karolis Mickūnas | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Programming student and aspiring full stack developer building practical software projects."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ramintuzelis.github.io/assets/images/ramintuzelis-banner.png"
+    />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <!--    Font Awesome-->
@@ -73,15 +102,25 @@
             <a href="#projects" class="hero-btn">See My Work</a>
             <!-- Social Icons -->
             <div class="social-icons">
-              <a href="https://github.com/ramintuzelis" target="_blank"
+              <a
+                href="https://github.com/ramintuzelis"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile"
                 ><i class="fab fa-github"></i
               ></a>
               <a
                 href="https://www.linkedin.com/in/karolis-mickunas/"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
                 ><i class="fab fa-linkedin"></i
               ></a>
-              <a href="https://www.facebook.com/karolyzzas" target="_blank"
+              <a
+                href="https://www.facebook.com/karolyzzas"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook profile"
                 ><i class="fab fa-facebook"></i
               ></a>
             </div>
@@ -124,7 +163,7 @@
     <section id="skills" class="skill-section">
       <h2>Skills</h2>
       <p>
-        Technologies I have studied and used in academic work and personal
+        Technologies I have studied or used in academic work and personal
         projects:
       </p>
       <div class="skills-list">
@@ -258,10 +297,23 @@
       </div>
 
       <!-- Certificate Modal structure -->
-      <div class="certificate-modal-overlay">
+      <div
+        class="certificate-modal-overlay"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-label="Certificate preview"
+        inert
+      >
         <div class="certificate-modal-content">
           <img class="certificate-modal-img" src="" alt="" />
-          <span class="close-certificate-modal">&times;</span>
+          <button
+            class="close-certificate-modal"
+            type="button"
+            aria-label="Close certificate preview"
+          >
+            &times;
+          </button>
         </div>
       </div>
     </section>
@@ -287,6 +339,7 @@
             href="https://github.com/ramintuzelis/RaminTodo"
             class="project-link"
             target="_blank"
+            rel="noopener noreferrer"
             >View on GitHub</a
           >
         </div>
@@ -307,6 +360,7 @@
             href="https://github.com/RaminTuzelis/csharp-appliance-store-oop"
             class="project-link"
             target="_blank"
+            rel="noopener noreferrer"
             >View on GitHub</a
           >
         </div>
@@ -327,20 +381,34 @@
             href="https://github.com/RaminTuzelis/java-atm-collections"
             class="project-link"
             target="_blank"
+            rel="noopener noreferrer"
             >View on GitHub</a
           >
         </div>
       </div>
 
       <!-- Project Modal structure -->
-      <div class="project-modal-overlay">
+      <div
+        class="project-modal-overlay"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="project-modal-title"
+        inert
+      >
         <div class="project-modal-content">
           <img class="project-modal-img" src="" alt="" />
           <div class="project-description">
-            <h3 class="project-modal-title"></h3>
+            <h3 class="project-modal-title" id="project-modal-title"></h3>
             <p class="project-modal-text"></p>
           </div>
-          <span class="close-modal">&times;</span>
+          <button
+            class="close-modal"
+            type="button"
+            aria-label="Close project preview"
+          >
+            &times;
+          </button>
         </div>
       </div>
     </section>
@@ -404,12 +472,24 @@
         Reserved.
       </p>
       <div class="footer-links">
-        <a href="https://github.com/ramintuzelis" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/karolis-mickunas/" target="_blank"
+        <a
+          href="https://github.com/ramintuzelis"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        |
+        <a
+          href="https://www.linkedin.com/in/karolis-mickunas/"
+          target="_blank"
+          rel="noopener noreferrer"
           >LinkedIn</a
         >
         |
-        <a href="https://www.facebook.com/karolyzzas" target="_blank"
+        <a
+          href="https://www.facebook.com/karolyzzas"
+          target="_blank"
+          rel="noopener noreferrer"
           >Facebook</a
         >
       </div>

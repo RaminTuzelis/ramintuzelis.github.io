@@ -81,9 +81,13 @@ const certificateModalImage = document.querySelector(".certificate-modal-img");
 const closeCertificateModalButton = document.querySelector(
   ".close-certificate-modal"
 );
+let lastFocusedCertificate = null;
 
 const closeCertificateModal = () => {
   certificateModalOverlay.classList.remove("active");
+  certificateModalOverlay.setAttribute("aria-hidden", "true");
+  certificateModalOverlay.setAttribute("inert", "");
+  lastFocusedCertificate?.focus();
 };
 
 const openCertificateModal = (certificate) => {
@@ -91,12 +95,29 @@ const openCertificateModal = (certificate) => {
 
   certificateModalImage.src = certificateImage.src;
   certificateModalImage.alt = certificateImage.alt;
+  lastFocusedCertificate = certificate;
   certificateModalOverlay.classList.add("active");
+  certificateModalOverlay.setAttribute("aria-hidden", "false");
+  certificateModalOverlay.removeAttribute("inert");
+  closeCertificateModalButton.focus();
 };
 
 certificates.forEach((certificate) => {
+  const certificateName = certificate.querySelector("img").alt;
+
+  certificate.setAttribute("role", "button");
+  certificate.setAttribute("tabindex", "0");
+  certificate.setAttribute("aria-label", `Open ${certificateName}`);
+
   certificate.addEventListener("click", () => {
     openCertificateModal(certificate);
+  });
+
+  certificate.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openCertificateModal(certificate);
+    }
   });
 });
 
@@ -125,24 +146,51 @@ const modalTitle = document.querySelector(".project-modal-title");
 const modalText = document.querySelector(".project-modal-text");
 const modalOverlay = document.querySelector(".project-modal-overlay");
 const closeModal = document.querySelector(".close-modal");
+let lastFocusedProjectImage = null;
 
 const closeProjectModal = () => {
   modalOverlay.classList.remove("active");
+  modalOverlay.setAttribute("aria-hidden", "true");
+  modalOverlay.setAttribute("inert", "");
+  lastFocusedProjectImage?.focus();
+};
+
+const openProjectModal = (projectImage) => {
+  const projectItem = projectImage.closest(".project-item");
+  const projectTitle = projectItem.querySelector("h3").textContent;
+  const projectText = projectItem.querySelector("p").textContent;
+  const projectImageSrc = projectImage.getAttribute("src");
+
+  modalImage.src = projectImageSrc;
+  modalImage.alt = `${projectTitle} Project Full View`;
+  modalTitle.textContent = projectTitle;
+  modalText.textContent = projectText;
+  lastFocusedProjectImage = projectImage;
+
+  modalOverlay.classList.add("active");
+  modalOverlay.setAttribute("aria-hidden", "false");
+  modalOverlay.removeAttribute("inert");
+  closeModal.focus();
 };
 
 projectImages.forEach((projectImage) => {
+  const projectTitle = projectImage
+    .closest(".project-item")
+    .querySelector("h3").textContent;
+
+  projectImage.setAttribute("role", "button");
+  projectImage.setAttribute("tabindex", "0");
+  projectImage.setAttribute("aria-label", `Open ${projectTitle} preview`);
+
   projectImage.addEventListener("click", () => {
-    const projectItem = projectImage.closest(".project-item");
-    const projectTitle = projectItem.querySelector("h3").textContent;
-    const projectText = projectItem.querySelector("p").textContent;
-    const projectImageSrc = projectImage.getAttribute("src");
+    openProjectModal(projectImage);
+  });
 
-    modalImage.src = projectImageSrc;
-    modalImage.alt = `${projectTitle} Project Full View`;
-    modalTitle.textContent = projectTitle;
-    modalText.textContent = projectText;
-
-    modalOverlay.classList.add("active");
+  projectImage.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openProjectModal(projectImage);
+    }
   });
 });
 

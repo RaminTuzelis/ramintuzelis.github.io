@@ -505,6 +505,9 @@ section#skills {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  padding: 0;
+  font-family: inherit;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -657,6 +660,9 @@ section#projects {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  padding: 0;
+  font-family: inherit;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -670,6 +676,14 @@ section#projects {
 .close-modal:hover {
   background-color: $color-accent-soft;
   border-color: $color-accent;
+}
+
+.certificates-item:focus-visible,
+.project-img:focus-visible,
+.close-certificate-modal:focus-visible,
+.close-modal:focus-visible {
+  outline: 3px solid $color-accent;
+  outline-offset: 4px;
 }
 
 /* Contact section ---------------------------------------------------- */
@@ -882,7 +896,7 @@ section#projects {
 
 // Responsive styles ----------------------------------------------------
 
-$desktop-large: 1200px;
+$desktop-large: 1360px;
 $desktop: 1100px;
 $tablet: 768px;
 $mobile-large: 600px;
@@ -944,9 +958,6 @@ $mobile-small: 480px;
 
   .hero-text p {
     width: auto;
-    white-space: normal;
-    border-right: none;
-    animation: none;
     font-size: 18px;
   }
 
@@ -1108,6 +1119,12 @@ $mobile-small: 480px;
 }
 
 @media (max-width: $mobile-large) {
+  .hero-text p {
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+
   .nav-bar {
     padding: 8px 20px;
   }
