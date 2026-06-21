@@ -800,6 +800,10 @@ section#projects {
   line-height: 1.5;
 }
 
+#formResponse.is-visible {
+  display: block;
+}
+
 #formResponse.success {
   color: #67e8f9;
 }

@@ -241,14 +241,12 @@ const isValidEmail = (email) => {
 
 const showFormResponse = (message, type) => {
   formResponse.textContent = message;
-  formResponse.className = type;
-  formResponse.style.display = "block";
+  formResponse.className = `${type} is-visible`;
 };
 
 const hideFormResponse = () => {
   formResponse.textContent = "";
   formResponse.className = "";
-  formResponse.style.display = "none";
 };
 
 const validateContactForm = () => {
